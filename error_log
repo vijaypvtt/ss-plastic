@@ -1,0 +1,88 @@
+[05-May-2024 15:38:27 UTC] PHP Fatal error:  Uncaught PHPMailer\PHPMailer\Exception: SMTP Error: Could not connect to SMTP host. Failed to connect to server in /home/m2gk1knjensk/public_html/phpmailer/phpmailer/src/PHPMailer.php:2286
+Stack trace:
+#0 /home/m2gk1knjensk/public_html/phpmailer/phpmailer/src/PHPMailer.php(2062): PHPMailer\PHPMailer\PHPMailer->smtpConnect()
+#1 /home/m2gk1knjensk/public_html/phpmailer/phpmailer/src/PHPMailer.php(1689): PHPMailer\PHPMailer\PHPMailer->smtpSend()
+#2 /home/m2gk1knjensk/public_html/phpmailer/phpmailer/src/PHPMailer.php(1523): PHPMailer\PHPMailer\PHPMailer->postSend()
+#3 /home/m2gk1knjensk/public_html/phpmailer/mail.php(38): PHPMailer\PHPMailer\PHPMailer->send()
+#4 {main}
+  thrown in /home/m2gk1knjensk/public_html/phpmailer/phpmailer/src/PHPMailer.php on line 2286
+[05-May-2024 15:41:02 UTC] PHP Fatal error:  Uncaught PHPMailer\PHPMailer\Exception: SMTP Error: Could not connect to SMTP host. Failed to connect to server in /home/m2gk1knjensk/public_html/phpmailer/phpmailer/src/PHPMailer.php:2286
+Stack trace:
+#0 /home/m2gk1knjensk/public_html/phpmailer/phpmailer/src/PHPMailer.php(2062): PHPMailer\PHPMailer\PHPMailer->smtpConnect()
+#1 /home/m2gk1knjensk/public_html/phpmailer/phpmailer/src/PHPMailer.php(1689): PHPMailer\PHPMailer\PHPMailer->smtpSend()
+#2 /home/m2gk1knjensk/public_html/phpmailer/phpmailer/src/PHPMailer.php(1523): PHPMailer\PHPMailer\PHPMailer->postSend()
+#3 /home/m2gk1knjensk/public_html/phpmailer/mail.php(38): PHPMailer\PHPMailer\PHPMailer->send()
+#4 {main}
+  thrown in /home/m2gk1knjensk/public_html/phpmailer/phpmailer/src/PHPMailer.php on line 2286
+[05-May-2024 15:44:27 UTC] PHP Fatal error:  Uncaught PHPMailer\PHPMailer\Exception: SMTP Error: Could not connect to SMTP host. Failed to connect to server in /home/m2gk1knjensk/public_html/phpmailer/phpmailer/src/PHPMailer.php:2286
+Stack trace:
+#0 /home/m2gk1knjensk/public_html/phpmailer/phpmailer/src/PHPMailer.php(2062): PHPMailer\PHPMailer\PHPMailer->smtpConnect()
+#1 /home/m2gk1knjensk/public_html/phpmailer/phpmailer/src/PHPMailer.php(1689): PHPMailer\PHPMailer\PHPMailer->smtpSend()
+#2 /home/m2gk1knjensk/public_html/phpmailer/phpmailer/src/PHPMailer.php(1523): PHPMailer\PHPMailer\PHPMailer->postSend()
+#3 /home/m2gk1knjensk/public_html/phpmailer/mail.php(38): PHPMailer\PHPMailer\PHPMailer->send()
+#4 {main}
+  thrown in /home/m2gk1knjensk/public_html/phpmailer/phpmailer/src/PHPMailer.php on line 2286
+[05-May-2024 15:44:44 UTC] PHP Fatal error:  Uncaught PHPMailer\PHPMailer\Exception: SMTP Error: Could not connect to SMTP host. Failed to connect to server in /home/m2gk1knjensk/public_html/phpmailer/phpmailer/src/PHPMailer.php:2286
+Stack trace:
+#0 /home/m2gk1knjensk/public_html/phpmailer/phpmailer/src/PHPMailer.php(2062): PHPMailer\PHPMailer\PHPMailer->smtpConnect()
+#1 /home/m2gk1knjensk/public_html/phpmailer/phpmailer/src/PHPMailer.php(1689): PHPMailer\PHPMailer\PHPMailer->smtpSend()
+#2 /home/m2gk1knjensk/public_html/phpmailer/phpmailer/src/PHPMailer.php(1523): PHPMailer\PHPMailer\PHPMailer->postSend()
+#3 /home/m2gk1knjensk/public_html/phpmailer/mail.php(38): PHPMailer\PHPMailer\PHPMailer->send()
+#4 {main}
+  thrown in /home/m2gk1knjensk/public_html/phpmailer/phpmailer/src/PHPMailer.php on line 2286
+[05-May-2024 15:47:03 UTC] PHP Fatal error:  Uncaught PHPMailer\PHPMailer\Exception: SMTP Error: Could not connect to SMTP host. Failed to connect to server in /home/m2gk1knjensk/public_html/phpmailer/phpmailer/src/PHPMailer.php:2286
+Stack trace:
+#0 /home/m2gk1knjensk/public_html/phpmailer/phpmailer/src/PHPMailer.php(2062): PHPMailer\PHPMailer\PHPMailer->smtpConnect()
+#1 /home/m2gk1knjensk/public_html/phpmailer/phpmailer/src/PHPMailer.php(1689): PHPMailer\PHPMailer\PHPMailer->smtpSend()
+#2 /home/m2gk1knjensk/public_html/phpmailer/phpmailer/src/PHPMailer.php(1523): PHPMailer\PHPMailer\PHPMailer->postSend()
+#3 /home/m2gk1knjensk/public_html/phpmailer/mail.php(38): PHPMailer\PHPMailer\PHPMailer->send()
+#4 {main}
+  thrown in /home/m2gk1knjensk/public_html/phpmailer/phpmailer/src/PHPMailer.php on line 2286
+[05-May-2024 15:47:52 UTC] PHP Fatal error:  Uncaught PHPMailer\PHPMailer\Exception: SMTP Error: Could not connect to SMTP host. Failed to connect to server in /home/m2gk1knjensk/public_html/phpmailer/phpmailer/src/PHPMailer.php:2286
+Stack trace:
+#0 /home/m2gk1knjensk/public_html/phpmailer/phpmailer/src/PHPMailer.php(2062): PHPMailer\PHPMailer\PHPMailer->smtpConnect()
+#1 /home/m2gk1knjensk/public_html/phpmailer/phpmailer/src/PHPMailer.php(1689): PHPMailer\PHPMailer\PHPMailer->smtpSend()
+#2 /home/m2gk1knjensk/public_html/phpmailer/phpmailer/src/PHPMailer.php(1523): PHPMailer\PHPMailer\PHPMailer->postSend()
+#3 /home/m2gk1knjensk/public_html/phpmailer/mail.php(38): PHPMailer\PHPMailer\PHPMailer->send()
+#4 {main}
+  thrown in /home/m2gk1knjensk/public_html/phpmailer/phpmailer/src/PHPMailer.php on line 2286
+[05-May-2024 15:52:02 UTC] PHP Fatal error:  Uncaught PHPMailer\PHPMailer\Exception: SMTP Error: Could not connect to SMTP host. Failed to connect to server in /home/m2gk1knjensk/public_html/phpmailer/phpmailer/src/PHPMailer.php:2286
+Stack trace:
+#0 /home/m2gk1knjensk/public_html/phpmailer/phpmailer/src/PHPMailer.php(2062): PHPMailer\PHPMailer\PHPMailer->smtpConnect()
+#1 /home/m2gk1knjensk/public_html/phpmailer/phpmailer/src/PHPMailer.php(1689): PHPMailer\PHPMailer\PHPMailer->smtpSend()
+#2 /home/m2gk1knjensk/public_html/phpmailer/phpmailer/src/PHPMailer.php(1523): PHPMailer\PHPMailer\PHPMailer->postSend()
+#3 /home/m2gk1knjensk/public_html/phpmailer/mail.php(38): PHPMailer\PHPMailer\PHPMailer->send()
+#4 {main}
+  thrown in /home/m2gk1knjensk/public_html/phpmailer/phpmailer/src/PHPMailer.php on line 2286
+[05-May-2024 15:56:57 UTC] PHP Fatal error:  Uncaught PHPMailer\PHPMailer\Exception: SMTP Error: Could not connect to SMTP host. Failed to connect to server in /home/m2gk1knjensk/public_html/phpmailer/phpmailer/src/PHPMailer.php:2286
+Stack trace:
+#0 /home/m2gk1knjensk/public_html/phpmailer/phpmailer/src/PHPMailer.php(2062): PHPMailer\PHPMailer\PHPMailer->smtpConnect()
+#1 /home/m2gk1knjensk/public_html/phpmailer/phpmailer/src/PHPMailer.php(1689): PHPMailer\PHPMailer\PHPMailer->smtpSend()
+#2 /home/m2gk1knjensk/public_html/phpmailer/phpmailer/src/PHPMailer.php(1523): PHPMailer\PHPMailer\PHPMailer->postSend()
+#3 /home/m2gk1knjensk/public_html/phpmailer/mail.php(38): PHPMailer\PHPMailer\PHPMailer->send()
+#4 {main}
+  thrown in /home/m2gk1knjensk/public_html/phpmailer/phpmailer/src/PHPMailer.php on line 2286
+[05-May-2024 15:57:50 UTC] PHP Fatal error:  Uncaught PHPMailer\PHPMailer\Exception: SMTP Error: Could not connect to SMTP host. Failed to connect to server in /home/m2gk1knjensk/public_html/phpmailer/phpmailer/src/PHPMailer.php:2286
+Stack trace:
+#0 /home/m2gk1knjensk/public_html/phpmailer/phpmailer/src/PHPMailer.php(2062): PHPMailer\PHPMailer\PHPMailer->smtpConnect()
+#1 /home/m2gk1knjensk/public_html/phpmailer/phpmailer/src/PHPMailer.php(1689): PHPMailer\PHPMailer\PHPMailer->smtpSend()
+#2 /home/m2gk1knjensk/public_html/phpmailer/phpmailer/src/PHPMailer.php(1523): PHPMailer\PHPMailer\PHPMailer->postSend()
+#3 /home/m2gk1knjensk/public_html/phpmailer/mail.php(38): PHPMailer\PHPMailer\PHPMailer->send()
+#4 {main}
+  thrown in /home/m2gk1knjensk/public_html/phpmailer/phpmailer/src/PHPMailer.php on line 2286
+[05-May-2024 15:59:57 UTC] PHP Fatal error:  Uncaught PHPMailer\PHPMailer\Exception: SMTP Error: Could not connect to SMTP host. Failed to connect to server in /home/m2gk1knjensk/public_html/phpmailer/phpmailer/src/PHPMailer.php:2286
+Stack trace:
+#0 /home/m2gk1knjensk/public_html/phpmailer/phpmailer/src/PHPMailer.php(2062): PHPMailer\PHPMailer\PHPMailer->smtpConnect()
+#1 /home/m2gk1knjensk/public_html/phpmailer/phpmailer/src/PHPMailer.php(1689): PHPMailer\PHPMailer\PHPMailer->smtpSend()
+#2 /home/m2gk1knjensk/public_html/phpmailer/phpmailer/src/PHPMailer.php(1523): PHPMailer\PHPMailer\PHPMailer->postSend()
+#3 /home/m2gk1knjensk/public_html/phpmailer/mail.php(38): PHPMailer\PHPMailer\PHPMailer->send()
+#4 {main}
+  thrown in /home/m2gk1knjensk/public_html/phpmailer/phpmailer/src/PHPMailer.php on line 2286
+[05-May-2024 16:00:01 UTC] PHP Fatal error:  Uncaught PHPMailer\PHPMailer\Exception: SMTP Error: Could not connect to SMTP host. Failed to connect to server in /home/m2gk1knjensk/public_html/phpmailer/phpmailer/src/PHPMailer.php:2286
+Stack trace:
+#0 /home/m2gk1knjensk/public_html/phpmailer/phpmailer/src/PHPMailer.php(2062): PHPMailer\PHPMailer\PHPMailer->smtpConnect()
+#1 /home/m2gk1knjensk/public_html/phpmailer/phpmailer/src/PHPMailer.php(1689): PHPMailer\PHPMailer\PHPMailer->smtpSend()
+#2 /home/m2gk1knjensk/public_html/phpmailer/phpmailer/src/PHPMailer.php(1523): PHPMailer\PHPMailer\PHPMailer->postSend()
+#3 /home/m2gk1knjensk/public_html/phpmailer/mail.php(38): PHPMailer\PHPMailer\PHPMailer->send()
+#4 {main}
+  thrown in /home/m2gk1knjensk/public_html/phpmailer/phpmailer/src/PHPMailer.php on line 2286
