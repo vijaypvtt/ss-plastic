@@ -14,6 +14,7 @@
     z-index: 1;
     line-height: 1.8;
   }
+  
 
   .footer-section::before {
     content: "";
