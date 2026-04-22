@@ -1,0 +1,158 @@
+.contact-page {
+  min-height: 100vh;
+}
+
+.inner-bg {
+  background-color: #e5e5e5;
+  padding: 40px 0;
+}
+
+.inner-head h1 {
+  color: #333;
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.inn-contact {
+  padding: 60px 0;
+  background-color: #f4f6f9;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.contact-head h4 {
+  font-size: 26px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  animation: fadeInDown 0.8s ease;
+}
+
+.contact-head p {
+  font-size: 16px;
+  color: #666;
+  animation: fadeInUp 0.8s ease;
+}
+
+.contact-left {
+  margin-bottom: 30px;
+}
+
+.contact-left input,
+.contact-left textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  font-family: inherit;
+}
+
+.contact-left input:focus,
+.contact-left textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+  outline: none;
+}
+
+.contact-left button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.contact-left button:hover {
+  background-color: #0056b3;
+}
+
+.cont-right {
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  animation: fadeInRight 0.9s ease;
+}
+
+.cont-right h2 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.info-block {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.info-block i {
+  font-size: 20px;
+  color: #007bff;
+  margin-right: 12px;
+  margin-top: 3px;
+  min-width: 24px;
+}
+
+.info-block a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.info-block a:hover {
+  text-decoration: underline;
+}
+
+.tall {
+  border-top: 2px solid #ccc;
+  margin: 40px 0;
+}
+
+.gst {
+  color: #222;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@media (max-width: 768px) {
+  .inn-contact {
+    padding: 40px 0;
+  }
+
+  .contact-head h4 {
+    font-size: 22px;
+  }
+
+  .cont-right {
+    margin-top: 30px;
+  }
+
+  .inner-head h1 {
+    font-size: 28px;
+  }
+}

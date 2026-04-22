@@ -1,0 +1,149 @@
+.about-page {
+  min-height: 100vh;
+}
+
+.inner-bg {
+  background-color: #e5e5e5;
+  padding: 40px 0;
+}
+
+.inner-head h1 {
+  color: #333;
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.about-section {
+  padding: 30px;
+  background-color: #f9f9f9;
+  border-left: 4px solid #1e88e5;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.about-section:hover {
+  transform: translateY(-5px);
+}
+
+.section-header h3 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1e88e5;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #1e88e5;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.about-content p {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.services-section {
+  padding: 40px 0;
+}
+
+.service-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.service-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.service-num {
+  background-color: #1e88e5;
+  color: white;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  line-height: 32px;
+  font-size: 16px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+.service-text {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #444;
+}
+
+.experience-box {
+  background-color: #0d47a1;
+  color: white;
+  padding: 20px 30px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.experience-box h3 {
+  font-size: 40px;
+  margin: 0;
+}
+
+.experience-box p {
+  margin: 5px 0 0;
+  font-size: 16px;
+}
+
+.experience-section {
+  padding: 50px 0;
+}
+
+.info-card {
+  background-color: #f9f9f9;
+  border-left: 4px solid #1e88e5;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.info-card h5 {
+  color: #1e88e5;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.info-card p {
+  color: #666;
+  font-size: 14px;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .inner-head h1 {
+    font-size: 28px;
+  }
+
+  .section-header h3 {
+    font-size: 22px;
+  }
+
+  .about-section {
+    padding: 20px;
+  }
+
+  .experience-box h3 {
+    font-size: 32px;
+  }
+}
