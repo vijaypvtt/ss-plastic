@@ -11,79 +11,246 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-/* Carousel Styles */
+/* Hero Slider */
 .banner {
   width: 100%;
-  margin-bottom: 30px;
+  margin-bottom: 42px;
 }
 
-.carousel {
+.hero-slider {
   position: relative;
+  min-height: 720px;
+  overflow: hidden;
+  background: #071f3c;
+}
+
+.hero-track {
+  position: relative;
+  min-height: 720px;
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+.hero-slide.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.hero-image {
   width: 100%;
+  height: 100%;
+  min-height: 720px;
+  object-fit: cover;
+  transform: scale(1.06);
+  transition: transform 5s ease;
 }
 
-.carousel-indicators {
-  bottom: 20px;
-  z-index: 15;
-  left: 50%;
-  transform: translateX(-50%);
+.hero-slide.active .hero-image {
+  transform: scale(1);
 }
 
-.carousel-indicators li {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.5);
-  cursor: pointer;
-  margin: 0 5px;
-  transition: all 0.3s ease;
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(4, 19, 41, 0.78) 0%, rgba(4, 19, 41, 0.52) 42%, rgba(4, 19, 41, 0.28) 100%),
+    radial-gradient(circle at top right, rgba(255, 196, 71, 0.18), transparent 28%);
 }
 
-.carousel-indicators li.active {
-  background-color: #007bff;
-  width: 30px;
-  border-radius: 5px;
-}
-
-.carousel-inner {
+.hero-content-wrap {
   position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  min-height: 720px;
 }
 
-.carousel-item {
-  display: none;
+.hero-content {
+  max-width: 700px;
+  color: #fff;
+  animation: heroRise 0.8s ease;
 }
 
-.carousel-item.active {
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 18px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  color: #ffd36f;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero-content h1 {
+  font-size: clamp(2.4rem, 5vw, 4.5rem);
+  line-height: 1.04;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.hero-content p {
+  max-width: 620px;
+  font-size: 1.08rem;
+  line-height: 1.85;
+  color: rgba(255, 255, 255, 0.86);
+  margin-bottom: 28px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.hero-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0 24px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.hero-btn:hover {
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+
+.hero-btn-primary {
+  background: linear-gradient(135deg, #f3b62b, #d79000);
+  color: #082c53;
+  box-shadow: 0 16px 28px rgba(243, 182, 43, 0.25);
+}
+
+.hero-btn-primary:hover {
+  color: #082c53;
+}
+
+.hero-btn-secondary {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.hero-btn-secondary:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.hero-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  width: 54px;
+  height: 54px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.hero-nav:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-50%) scale(1.04);
+}
+
+.hero-nav span {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.hero-nav-prev {
+  left: 24px;
+}
+
+.hero-nav-next {
+  right: 24px;
+}
+
+.hero-indicators {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 28px;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0 16px;
+}
+
+.hero-indicator {
+  min-width: 120px;
+  padding: 12px 14px;
+  border: 0;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(8px);
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.hero-indicator:hover,
+.hero-indicator.active {
+  background: rgba(255, 255, 255, 0.18);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.hero-indicator-bar {
   display: block;
-  animation: fadeIn 0.5s ease-in;
+  width: 26px;
+  height: 3px;
+  border-radius: 999px;
+  margin-bottom: 8px;
+  background: rgba(255, 255, 255, 0.35);
 }
 
-@keyframes fadeIn {
+.hero-indicator.active .hero-indicator-bar {
+  width: 46px;
+  background: #f3b62b;
+}
+
+.hero-indicator-label {
+  display: block;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+@keyframes heroRise {
   from {
     opacity: 0;
+    transform: translateY(18px);
   }
+
   to {
     opacity: 1;
-  }
-}
-
-.carousel-item img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  max-height: 600px;
-}
-
-.carousel-zoom img {
-  animation: zoomIn 0.5s ease-in;
-}
-
-@keyframes zoomIn {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(1.02);
+    transform: translateY(0);
   }
 }
 
@@ -297,8 +464,19 @@ body {
     font-size: 16px;
   }
 
-  .carousel-item img {
-    max-height: 400px;
+  .hero-slider,
+  .hero-track,
+  .hero-image,
+  .hero-content-wrap {
+    min-height: 620px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.6rem;
+  }
+
+  .hero-nav {
+    display: none;
   }
 }
 
@@ -315,8 +493,44 @@ body {
     font-size: 22px;
   }
 
-  .carousel-item img {
-    max-height: 300px;
+  .hero-slider,
+  .hero-track,
+  .hero-image,
+  .hero-content-wrap {
+    min-height: 560px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    padding-bottom: 90px;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 0.95rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-btn {
+    width: 100%;
+  }
+
+  .hero-indicators {
+    bottom: 16px;
+    justify-content: flex-start;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+  }
+
+  .hero-indicator {
+    min-width: 150px;
   }
 
   .product-card img {

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -7,43 +8,119 @@ import './IndexPage.css';
 // Carousel Component
 function Carousel() {
   const [activeIndex, setActiveIndex] = useState(0);
-  const bannerImages = [
-    '/images/banner/pic1.webp',
-    '/images/banner/pic2.webp',
-    '/images/banner/pic3.webp',
-    '/images/banner/pic4.webp',
-    '/images/banner/pic5.webp'
+  const slides = [
+    {
+      image: '/images/banner/pic1.webp',
+      eyebrow: 'Industrial FRP Excellence',
+      title: 'Custom FRP Systems Built For Demanding Plants',
+      description:
+        'Precision fabrication for storage, ventilation, scrubbing, and corrosion-resistant process equipment.',
+      primaryCta: { to: '/contact', label: 'Get a Quote' },
+      secondaryCta: { to: '/products/tanks', label: 'Explore Products' }
+    },
+    {
+      image: '/images/banner/pic2.webp',
+      eyebrow: 'Storage & Handling',
+      title: 'Reliable Tanks And Process Equipment For Critical Operations',
+      description:
+        'Durable FRP solutions designed for chemical, pharma, water treatment, and heavy industrial environments.',
+      primaryCta: { to: '/products/tanks', label: 'View Storage Tanks' },
+      secondaryCta: { to: '/about', label: 'About Our Company' }
+    },
+    {
+      image: '/images/banner/pic3.webp',
+      eyebrow: 'Air & Fume Control',
+      title: 'Ducting And Scrubber Systems That Support Clean Performance',
+      description:
+        'Application-focused fabrication for ventilation networks, exhaust handling, and emission control systems.',
+      primaryCta: { to: '/products/ductings', label: 'See Ducting Systems' },
+      secondaryCta: { to: '/products/scrubbers', label: 'See Scrubbers' }
+    },
+    {
+      image: '/images/banner/pic4.webp',
+      eyebrow: 'Plant Fabrication',
+      title: 'Pipes, Fittings, Vessels, And FRP Components Under One Roof',
+      description:
+        'From custom layouts to production-ready equipment, we support industrial projects with dependable FRP manufacturing.',
+      primaryCta: { to: '/products/pipes', label: 'View Pipes & Fittings' },
+      secondaryCta: { to: '/products/vessels', label: 'View Vessels' }
+    },
+    {
+      image: '/images/banner/pic5.webp',
+      eyebrow: 'Built For Industry',
+      title: 'Serving Industrial Clients With Quality, Speed, And Durability',
+      description:
+        'Engineered solutions from Vapi for long-term performance in aggressive operating conditions.',
+      primaryCta: { to: '/gallery', label: 'View Gallery' },
+      secondaryCta: { to: '/contact', label: 'Talk To Our Team' }
+    }
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % bannerImages.length);
+      setActiveIndex((prev) => (prev + 1) % slides.length);
     }, 4000);
     return () => clearInterval(interval);
-  }, [bannerImages.length]);
+  }, [slides.length]);
+
+  const goToPrevious = () => {
+    setActiveIndex((prev) => (prev - 1 + slides.length) % slides.length);
+  };
+
+  const goToNext = () => {
+    setActiveIndex((prev) => (prev + 1) % slides.length);
+  };
 
   return (
-    <div className="banner">
-      <div id="carousel" className="carousel slide carousel-fade" data-interval="4000">
-        <ol className="carousel-indicators">
-          {bannerImages.map((_, index) => (
-            <li
-              key={index}
-              data-slide-to={index}
-              className={index === activeIndex ? 'active' : ''}
-              onClick={() => setActiveIndex(index)}
-            ></li>
-          ))}
-        </ol>
-        <div className="carousel-inner carousel-zoom">
-          {bannerImages.map((image, index) => (
-            <div key={index} className={`carousel-item ${index === activeIndex ? 'active' : ''}`}>
-              <img className="img-responsive d-block w-100" src={image} alt={`Banner ${index + 1}`} />
+    <section className="banner">
+      <div className="hero-slider">
+        <div className="hero-track">
+          {slides.map((slide, index) => (
+            <div key={slide.image} className={`hero-slide ${index === activeIndex ? 'active' : ''}`}>
+              <img className="hero-image" src={slide.image} alt={slide.title} />
+              <div className="hero-overlay"></div>
+              <div className="container hero-content-wrap">
+                <div className="hero-content">
+                  <span className="hero-eyebrow">{slide.eyebrow}</span>
+                  <h1>{slide.title}</h1>
+                  <p>{slide.description}</p>
+                  <div className="hero-actions">
+                    <Link to={slide.primaryCta.to} className="hero-btn hero-btn-primary">
+                      {slide.primaryCta.label}
+                    </Link>
+                    <Link to={slide.secondaryCta.to} className="hero-btn hero-btn-secondary">
+                      {slide.secondaryCta.label}
+                    </Link>
+                  </div>
+                </div>
+              </div>
             </div>
           ))}
         </div>
+
+        <button className="hero-nav hero-nav-prev" onClick={goToPrevious} type="button" aria-label="Previous slide">
+          <span>&lsaquo;</span>
+        </button>
+        <button className="hero-nav hero-nav-next" onClick={goToNext} type="button" aria-label="Next slide">
+          <span>&rsaquo;</span>
+        </button>
+
+        <div className="hero-indicators">
+          {slides.map((slide, index) => (
+            <button
+              key={slide.title}
+              type="button"
+              className={`hero-indicator ${index === activeIndex ? 'active' : ''}`}
+              onClick={() => setActiveIndex(index)}
+              aria-label={`Go to slide ${index + 1}`}
+            >
+              <span className="hero-indicator-bar"></span>
+              <span className="hero-indicator-label">{slide.eyebrow}</span>
+            </button>
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
 
