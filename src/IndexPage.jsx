@@ -15,6 +15,9 @@ function Carousel() {
       title: 'Custom FRP Systems Built For Demanding Plants',
       description:
         'Precision fabrication for storage, ventilation, scrubbing, and corrosion-resistant process equipment.',
+      hoverTitle: 'Fabricated For Tough Process Conditions',
+      hoverText:
+        'From tanks to ducting, we build FRP systems that stay dependable in corrosive industrial environments.',
       primaryCta: { to: '/contact', label: 'Get a Quote' },
       secondaryCta: { to: '/products/tanks', label: 'Explore Products' }
     },
@@ -24,6 +27,9 @@ function Carousel() {
       title: 'Reliable Tanks And Process Equipment For Critical Operations',
       description:
         'Durable FRP solutions designed for chemical, pharma, water treatment, and heavy industrial environments.',
+      hoverTitle: 'Built Around Your Plant Requirement',
+      hoverText:
+        'Our storage solutions are tailored for capacity, media compatibility, and long operating life.',
       primaryCta: { to: '/products/tanks', label: 'View Storage Tanks' },
       secondaryCta: { to: '/about', label: 'About Our Company' }
     },
@@ -33,6 +39,9 @@ function Carousel() {
       title: 'Ducting And Scrubber Systems That Support Clean Performance',
       description:
         'Application-focused fabrication for ventilation networks, exhaust handling, and emission control systems.',
+      hoverTitle: 'Smart Air Handling Support',
+      hoverText:
+        'We help industrial plants manage fumes, exhaust, and process air with custom FRP fabrication.',
       primaryCta: { to: '/products/ductings', label: 'See Ducting Systems' },
       secondaryCta: { to: '/products/scrubbers', label: 'See Scrubbers' }
     },
@@ -42,6 +51,9 @@ function Carousel() {
       title: 'Pipes, Fittings, Vessels, And FRP Components Under One Roof',
       description:
         'From custom layouts to production-ready equipment, we support industrial projects with dependable FRP manufacturing.',
+      hoverTitle: 'One Partner For Multiple FRP Needs',
+      hoverText:
+        'Integrated fabrication helps keep your project cleaner, faster, and more consistent from start to finish.',
       primaryCta: { to: '/products/pipes', label: 'View Pipes & Fittings' },
       secondaryCta: { to: '/products/vessels', label: 'View Vessels' }
     },
@@ -51,6 +63,9 @@ function Carousel() {
       title: 'Serving Industrial Clients With Quality, Speed, And Durability',
       description:
         'Engineered solutions from Vapi for long-term performance in aggressive operating conditions.',
+      hoverTitle: 'Quality You Can Put Into Service',
+      hoverText:
+        'We focus on reliable workmanship, practical delivery, and FRP systems that perform over time.',
       primaryCta: { to: '/gallery', label: 'View Gallery' },
       secondaryCta: { to: '/contact', label: 'Talk To Our Team' }
     }
@@ -84,6 +99,11 @@ function Carousel() {
                   <span className="hero-eyebrow">{slide.eyebrow}</span>
                   <h1>{slide.title}</h1>
                   <p>{slide.description}</p>
+                  <div className="hero-hover-card">
+                    <span className="hero-hover-label">On Hover</span>
+                    <h3>{slide.hoverTitle}</h3>
+                    <p>{slide.hoverText}</p>
+                  </div>
                   <div className="hero-actions">
                     <Link to={slide.primaryCta.to} className="hero-btn hero-btn-primary">
                       {slide.primaryCta.label}

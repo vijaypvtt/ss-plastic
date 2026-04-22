@@ -106,6 +106,50 @@ body {
   margin-bottom: 28px;
 }
 
+.hero-hover-card {
+  max-width: 520px;
+  margin-bottom: 24px;
+  padding: 18px 20px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.25s ease, transform 0.25s ease, background 0.25s ease;
+  pointer-events: none;
+}
+
+.hero-slide:hover .hero-hover-card,
+.hero-slide:focus-within .hero-hover-card {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-hover-label {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: #ffd36f;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero-hover-card h3 {
+  margin: 0 0 8px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.hero-hover-card p {
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.8);
+}
+
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
@@ -511,6 +555,12 @@ body {
 
   .hero-content p {
     font-size: 0.95rem;
+  }
+
+  .hero-hover-card {
+    opacity: 1;
+    transform: none;
+    padding: 16px;
   }
 
   .hero-actions {
